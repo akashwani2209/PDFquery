@@ -15,6 +15,7 @@ https://huggingface.co/facebook/dpr-question_encoder-single-nq-base
 
 Example use
 
+```bash
 from transformers import DPRQuestionEncoder, DPRQuestionEncoderTokenizer
 
 tokenizer = DPRQuestionEncoderTokenizer.from_pretrained("facebook/dpr-question_encoder-single-nq-base")
@@ -22,6 +23,7 @@ model = DPRQuestionEncoder.from_pretrained("facebook/dpr-question_encoder-single
 input_ids = tokenizer("Hello, is my dog cute ?", return_tensors="pt")["input_ids"]
 embeddings = model(input_ids).pooler_output
 
+```
 ## Deployment
 
 To run this project locally
